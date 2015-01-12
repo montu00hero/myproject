@@ -11,7 +11,7 @@
 
 <ul>
   <li ng-repeat="x in names">
-    {{ x.Name + ', ' + x.Country }}
+    {{ x.Name + ', ' + x.Country }}  
   </li>
 </ul>
 
@@ -21,11 +21,18 @@
 function customersController($scope,$http) {
   $http.get("http://www.w3schools.com//website/Customers_JSON.php")
   .success(function(response) {$scope.names = response;});
-}
+}         
+
+// here names is a variable that to which a json value is assigned  
+
 </script>
 
 </body>
 </html>
+
+<p>  
+    json data              
+    
 [
 {
 "Name" : "Alfreds Futterkiste",
@@ -113,3 +120,6 @@ function customersController($scope,$http) {
 "Country" : "Poland"
 }
 ]
+
+
+</p>
