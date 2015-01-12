@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html ng-app="" ng-init="data1=true">
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <input type="button" value='click' ng-disabled="clickedme" />
+        <input type='checkbox' ng-model="clickedme"  />
+        <p>{{clickedme}}</p>
+        <script src='angular.min.js'></script>
+        
+        <div >
+            <input type="checkbox" ng-model="data1" />check<p>{{data1}}</p>
+            <input type="text" ng-show="data1" placeholder="ng-show(shows when data is true)" />
+            
+            
+        </div>    
+        
+        
+        
+    </body>
+</html>
