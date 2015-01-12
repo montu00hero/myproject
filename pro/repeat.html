@@ -12,9 +12,10 @@ and open the template in the editor.
     </head>
     <body ng-controller="mycontroller">
         <div style="width:200px">
-          <ul class="list-group">  
-            <h6>Product:{{items[0].name}}</h6>
-            <h6>Price:${{items[0].price}}</h6>
+            <ul class="list-group" ng-repeat="x in items">  
+            <h6>Product:{{x.name}}</h6>
+            <h6>Price:{{x.price | currency}}</h6>   <!--here using filter --> 
+             <h6>Desc:{{x.desc}}</h6>
            
         </div>
         
