@@ -1,7 +1,13 @@
 <html>
     <title>Title:Auto Complete</title>
     <head>
-       
+        <style>
+            table th{background-color: tan}
+            
+            table tr:nth-child(even){background-color: f1f1f1}
+            table tr:nth-child(odd){background-color: ffffff}
+            
+        </style>
     </head>
     <body>
           <script src="angular.min.js" type="text/javascript"></script>
@@ -9,12 +15,21 @@
           
         <div ng-app="" ng-controller="appController1">
          
-              <input  type="text" ng-keypress="fun();" id="box" />
+            <input autocomplete="true" type="text" ng-keypress="fun();" id="box" />
             <form>
-               <table>
-                   <tr ng-repeat="x in master">
-                       <td>{{x.city}}</td>
-                   </tr>
+               <table border="1">
+                      <thead>
+                        <tr>
+                         <th>
+                           City Name(s)
+                         </th>                          
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr ng-repeat="x in master">
+                          <td>{{x.city}}</td>
+                        </tr>
+                      </tbody>
                </table>
            </form>
         </div>
@@ -102,8 +117,7 @@
      
 <script>
 function appController1($scope,$http) {
-    
-
+  
    $scope.fun=function(){  
        
         var wor=$("#box").val();
