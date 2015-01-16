@@ -24,7 +24,7 @@ $qu="select cityId,cityName from cities";
       echo '<tr><td><input type="text" value="'.$row["cityName"].'" id="txt'.$row['cityId'].'" readonly="true" /></td>';
       echo   '<td><button   id="'.$row['cityId'].'"  onclick="fun('.$row['cityId'].')">Edit</button>'
                  . '<button style="display:none" onclick=update('.$row['cityId'].');  id="up'.$row['cityId'].'">Update</button></td>'
-                   . '<td><button style="display:none" onclick=cancel('.$row['cityId'].');  id="can'.$row['cityId'].'" ></td></tr>';
+                   . '<td><button style="display:none" onclick=cancel('.$row['cityId'].',"'.$row["cityName"].'");  id="can'.$row['cityId'].'" >Cancel</button></td></tr>';
 }
 mysql_close();
 ?>
@@ -43,7 +43,7 @@ mysql_close();
          
          function update(id)
          {
-          
+          //for update
             
             var city= $('#txt'+id).val();
             $.ajax({
@@ -64,12 +64,12 @@ mysql_close();
              
          }
          
-         function cancel(id){
-            $('#up'+id).hide();
+         function cancel(id,name){
+                $('#up'+id).hide();
                 $('#can'+id).hide();
                 $('#'+id).show();
                 $('#txt'+id).attr('readonly',true);    
-             $('#'+id)[0].reset();
+                $('#txt'+id).val(name);
          }
          
     </script>
