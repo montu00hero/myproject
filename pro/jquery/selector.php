@@ -19,39 +19,20 @@
         $(function(){
           //  $(function(){ });    is equal to    $(document).ready(function(){ });
  
-           $("input[name='ac']").css("background-color","orange");
+          $("input[name='ac']").css("background-color","orange");
           $("[name='bc']").css("background-color","green"); 
-         $("[name='btn']").css("background-color","yellow");     
-    });
+          $("[name='btn']").css("background-color","yellow");     
+          });
         
-        $("input[value='click']").click(function(){
+          $("input[value='click']").click(function(){
              $("input[value='click']").removeAttr("style");
              $(".aa").removeAttr("style");
            
-        
-        
-        $("input[name='bc']").append('The .append() method inserts the specified content as the last child of each element in the jQuery collection (To insert it as the first child, use .prepend())');
+          $("input[name='bc']").append('The .append() method inserts the specified content as the last child of each element in the jQuery collection (To insert it as the first child, use .prepend())');
              
-        });
+          });
         
-        
-        </script>  
-        
-        
-        
-        
-        
-        
-        
+        </script>   
     </body>
 </html>
-
-
-
-<?php
-
-
-
-
-?>
 

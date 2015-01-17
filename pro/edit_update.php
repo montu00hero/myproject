@@ -21,10 +21,12 @@ $qu="select cityId,cityName from cities";
 
  while ($row = mysql_fetch_array($res)) {
     
-      echo '<tr><td><input type="text" value="'.$row["cityName"].'" id="txt'.$row['cityId'].'" readonly="true" /></td>';
+      echo '<tr>';
+     echo '<td><input type="text" value="'.$row["cityName"].'" id="txt'.$row['cityId'].'" readonly="true" /></td>';
       echo   '<td><button   id="'.$row['cityId'].'"  onclick="fun('.$row['cityId'].')">Edit</button>'
                  . '<button style="display:none" onclick=update('.$row['cityId'].');  id="up'.$row['cityId'].'">Update</button></td>'
-                   . '<td><button style="display:none" onclick=cancel('.$row['cityId'].',"'.$row["cityName"].'");  id="can'.$row['cityId'].'" >Cancel</button></td></tr>';
+                   . '<td><button  onclick=cancel('.$row['cityId'].',"'.$row["cityName"].'");  id="can'.$row['cityId'].'" style="display:none" >Cancel</button></td>';
+              echo '</tr>';
 }
 mysql_close();
 ?>
