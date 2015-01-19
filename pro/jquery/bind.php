@@ -16,7 +16,28 @@
                             $("a,input").css("color","green");
                             
                         });
+                        
+                        
+                        
+                                  
+          $("#divArea").bind('mousemove',function(event){
+              $(this).text(event.pageX+','+event.pageY);
+              
+          });     
+             
+                        
+         $("#btns").click(function(){
+            $("a").unbind("click");
+             
+         });          
+                   
+                   
+            
                 });
+                
+               
+        
+                
         </script>
     </head>
    <body>
@@ -25,6 +46,12 @@
        
        <input id="sid" type="text" />
        
+       
+       
+       <div id="divArea" style="background-color: silver; width: 100px; height: 100px;">
+</div>
+
+       <input id="btns" type="button" value="unbind event " />
    </body>
 
 </html>
