@@ -6,7 +6,9 @@
     <head>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script>
-           $(function(){
+    // unbind method used to remove the event associated the a particular element.       
+    
+    $(function(){
            var handler=function(){
                alert("handler1");
                $("#first").unbind("click",handler);
