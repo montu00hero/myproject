@@ -13,6 +13,10 @@
         
         
         <script>
+            // .eq() is used to find the index of element
+            //find is used to find the given element
+            
+            
             var i=0;
             $("#finds").click(function(){ 
                 
