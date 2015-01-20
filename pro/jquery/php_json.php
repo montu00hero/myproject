@@ -13,3 +13,11 @@ $a = array("'foo'","'bar'","'baz'","'dded'", "'dd'");
 echo "Normal: ",  json_encode($a), "\n";
 
 //var_dump(json_decode($a));
+
+?>
+
+<script>
+window.confirm("Do you realy want to close the window ?");
+
+
+</script>
