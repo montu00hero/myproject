@@ -10,9 +10,15 @@ function welcome() {
         echo "Good Evening";
     }
    }
+   
+  function aa()
+  {
+      echo $_SERVER['HTTP_HOST'];   
+  }
+  
 }
 $sq= new s;
 $sq->welcome();
-
+$sq->aa();
 
 ?>
