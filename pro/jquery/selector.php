@@ -7,15 +7,40 @@
     <body>
         <div>
             <input type="text" name="ll" />
-            
         </div>
+       
         <input class="aa" type="text" name="ac" />
         <input class="aa" type="text" name="bc" /> 
         <input type="button" name="btn" value="click" />
-         <input type="button" name="btn1" value="click1" />  
+        <input type="button" name="btn1" value="click1" />  
         
-        
-        
+        <div>
+           <select id="first" multiple>
+                <option >select</option>
+                <option>11</option>
+                <option>12</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>36</option>
+            </select>
+        </div>
+        <div>
+            <button onclick="down()">shift down</button>
+            <button onclick="up()">shift up</button>
+            
+        </div>
+        <div>
+            <select id="second" multiple>
+                <option >select</option>
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+            </select>
+        </div>
         
         
      <script>
@@ -44,12 +69,36 @@
               $("input[name='inp']").remove();
                
            }); 
-            function h(aa){
+        
+           $("input[name='ll']").on('input',function(){
+              alert("input");
+               
+           }); 
+        
+        
+         function h(aa){
             
                //alert(aa);
                  // $(aa).remove();
             $(aa).css("background-color","green");
            }
+        
+        /* selectors   */
+        
+        
+        function down()
+        {
+            $("#second").append($('#first').children(':selected'));
+            
+        }
+        
+        function up()
+        {
+             $("#first").append($('#second').children(':selected'));
+            
+        }
+        
+        
         
         
         </script>   
