@@ -28,6 +28,7 @@
         <div>
             <button onclick="down()">shift down</button>
             <button onclick="up()">shift up</button>
+            <button onclick="both()">shift up</button>
             
         </div>
         <div>
@@ -39,6 +40,17 @@
                 <option>4</option>
                 <option>5</option>
                 <option>6</option>
+            </select>
+        </div>
+        <div>
+            <select id="third" multiple>
+                <option >select</option>
+                <option>100</option>
+                <option>200</option>
+                <option>300</option>
+                <option>400</option>
+                <option>500</option>
+                <option>600</option>
             </select>
         </div>
         
@@ -98,7 +110,12 @@
             
         }
         
-        
+        function both()
+        {
+            $("#first").append($('#third').children(':selected'));
+            $("#second").append($('#third').children(':selected'));
+            
+        }
         
         
         </script>   
