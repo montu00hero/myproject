@@ -1,9 +1,13 @@
 <?php
+
+// in  javascript 
+
 ?>
 
 
 <script>
-    var txt = "";
+
+var txt = "";
 txt += "<p>Browser CodeName: " + navigator.appCodeName + "</p>";
 txt += "<p>Browser Name: " + navigator.appName + "</p>";
 txt += "<p>Browser Version: " + navigator.appVersion + "</p>";
