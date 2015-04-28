@@ -30,8 +30,6 @@
                $('label').empty();
            });
            
-           
-           
            $("#ctn").click(function(){
                $('label').empty().text("1857'THE REVENGE'").css('color','red');
                
