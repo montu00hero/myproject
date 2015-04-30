@@ -85,4 +85,16 @@
        }
       myfunction();
 
+
+      
+//----------------------  checking wether a check box is checked or not.
+         $('#someradiobutton').is(':checked') // radio and checkbox returns true if checked, else false
+         
+          $('#checkMeOut').prop('checked'); // true
+           
+          $('input[type=checkbox]:checked') 
+           
+    //----------------
+                   
+            alert(document.getElementById('id').checked);
 </script>
