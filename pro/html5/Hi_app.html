@@ -16,8 +16,10 @@ and open the template in the editor.
             <select onclick="message()" id="aa">
                 <option value="">Please Select</option>   
                 <option value="amr">Manti</option>   
-                <option value="san">Santi</option>   
                 <option value="kaj">Kajal</option>   
+                <option value="san">Santi</option>   
+                
+                
             </select>
             
         </div>
@@ -26,7 +28,7 @@ and open the template in the editor.
             <marquee> Hi,Amrita How Are You...  </marquee>
         </div>
         <div id="b" style="display:none">
-            <marquee> </marquee>
+            <marquee  >santi ganti yes didi  ! ganti churaya yes didi! wapas kar k aao no didi ! </marquee>
             
         </div>
         <div id="c" style="display:none">
@@ -44,14 +46,31 @@ and open the template in the editor.
            var op=document.getElementById("aa").options;  
        if(op[ind].value=='amr')
        {
-           document.getElementById("aa").style.dispaly='block';
+           
+           document.getElementById("b").style.display='none';
+           document.getElementById("c").style.display='none';
+           document.getElementById("a").style.display='block';
        }  
        
        if(op[ind].value=='san')
-       {}  
+       {
+           document.getElementById("a").style.display='none';
+           document.getElementById("c").style.display='none';
+           alert('!!!jahapanha tusi great ho! tufa kabul karo!!!!');
+           alert('!Ab app duniya k bachoo mai mashoor ho jaagi!');
+           alert('!Ready steady and Go!');
+           
+           document.getElementById("b").style.display='block';
+           
+       }  
        
        if(op[ind].value=='kaj')
-       {}  
+       {
+           document.getElementById("a").style.display='none';
+           document.getElementById("b").style.display='none';
+           document.getElementById("c").style.display='block';
+           
+       }  
        
         
         
