@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>HELLO</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <label>Select Your Name</label>
+            <select onclick="message()" id="aa">
+                <option value="">Please Select</option>   
+                <option value="amr">Manti</option>   
+                <option value="san">Santi</option>   
+                <option value="kaj">Kajal</option>   
+            </select>
+            
+        </div>
+        
+        <div id="a" style="display:none">
+            <marquee> Hi,Amrita How Are You...  </marquee>
+        </div>
+        <div id="b" style="display:none">
+            <marquee> </marquee>
+            
+        </div>
+        <div id="c" style="display:none">
+            
+            <marquee>Hi,Kajal How Are You..... </marquee>
+            
+        </div>
+        
+    </body>
+</html>
+<script>
+    function message()
+    {    
+           var ind=document.getElementById("aa").selectedIndex;  
+           var op=document.getElementById("aa").options;  
+       if(op[ind].value=='amr')
+       {
+           document.getElementById("aa").style.dispaly='block';
+       }  
+       
+       if(op[ind].value=='san')
+       {}  
+       
+       if(op[ind].value=='kaj')
+       {}  
+       
+        
+        
+    }
+    
+    
+</script>    
