@@ -18,6 +18,9 @@
 $(function(){
           // var ck=$('#ckd').is(':checked');
               $('#ckd').prop('checked','true')
+              
+             var s= $("input[type='checkbox']:checked").val();
+              alert(s);
         //$('#ckd').attr('checked',false);
      
      $('#ckd').on('click',function(){
