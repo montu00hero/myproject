@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>image map</title>
+         <!-- fav icon  (image in browser tab) -->
+         <link rel="icon" href="demo_icon.gif" type="image/gif" sizes="16x16">  <!-- defining size of icon-->
+         <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
+         <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
+         
+         
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>
+            <a href='#bottom'>go down </a>
+            
+            <a href='/web/address/'><img src="../" alt="image" name='show'></a> <!-- linking  img to a web url-->
+            
+            
+            <h6>linking web url to a particular portion of image </h6>
+            <img name='in' alt='image map' src='../' width='200px' height='200px' usemap="#first" >
+            
+            <map name='first'>
+                <area src='../' alt="img" coords="0,0,82,126" shape="rect">
+                <area src='../' alt="img" coords='60,56,34,' shape="circle">
+                <area src='../' alt="img" coords='90,2,2' shape="circle">
+                
+            </map>
+            
+            
+            
+             <h6>for linking id is used in go down </h6>
+            <a id="bottom" name="bottom"></a>
+            
+        </div>
+    </body>
+</html>
