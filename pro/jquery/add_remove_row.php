@@ -12,7 +12,7 @@
                     <option val="vvv">456</option>
                 </select>
                 <input type="button" onclick="show(this)" value="Show">
-                <input type="button" onclick="remove(this)" value="Remove">
+                <input type="button" onclick="rm(this)" value="Remove">
                 
             </div>
         </div>
@@ -47,9 +47,11 @@
  {
      $(obj).siblings('input[name="pname"]').css('background-color','red');
  }
- function remove(obj)
+ function rm(obj)
  {
-     $(obj).parents('div.row').remove();
+     //var s=$(obj).parent().prop('class');
+     $(obj).parent().remove();
+     //alert(s);
  }
 
 
