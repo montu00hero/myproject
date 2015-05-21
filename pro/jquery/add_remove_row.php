@@ -18,6 +18,7 @@
         </div>
         <div><input type='submit'  name='Add' value='ADD MORE ROW'>
             <input type='submit'  name='remove' value='REMOVE ROW'>
+            <input type="text" name="update" >
         </div>
     </body>
 </html>
@@ -31,7 +32,7 @@
          $('div.row').append($(a).clone());  //adding the clone of object; 
          $('div.row').children('.containts:last').find('input:text').val("");  //removing the val of input type text 
             alert($('div.row').children().length);   //no of children in row div;
-         
+         $('update').
      });
      
      $('input[name="remove"]').on('click',function(){
