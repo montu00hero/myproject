@@ -1,0 +1,44 @@
+<!--<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">-->
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Welcome to   Solutions</title>
+      <link href="CSS/Systel.css" rel="stylesheet" type="text/css" />
+       <script>
+           var typespeed = 400;
+           var MessagePause = 1000;
+           var message = new Array();
+           var currMessage = 0;
+           var offset = 0;
+           message[0] = "Welcome to   Solutions";
+           message[1] = "Welcome to   Solutions";
+           function Display() {
+               var text = message[currMessage];
+               if (offset < text.length) {
+                   if (text.charAt(offset) == " ")
+                       offset++;
+                   var partMessage = text.substring(0, offset + 1);
+                   document.title = partMessage;
+                   offset++;
+                   setTimeout("Display()", typespeed);
+               } else {
+                   offset = 0;
+                   currMessage++;
+                   if (currMessage == message.length)
+                       currMessage = 0;
+                   setTimeout("Display()", MessagePause);
+               }
+           }
+           Display(); 
+        </script>
+    <style type="text/css">
+        .style1
+        {
+            font-family: Verdana;
+            font-size: 11px;
+            text-align: justify;
+            height: 172px;
+        }
+    </style>
+   </head>
+  </html>
