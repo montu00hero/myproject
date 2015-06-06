@@ -93,10 +93,10 @@ $seconds = floor(($seconds - ($days * 86400) - ($hours * 3600) - ($minutes*60)))
     
     
 
-$date = date_create('2000-01-01', timezone_open('Pacific/Nauru'));
+$date = date_create('2000-01-01', timezone_open('Pacific/Nauru'));  //deparcher
 echo date_format($date, 'Y-m-d H:i:sP') . "\n";
 
-date_timezone_set($date, timezone_open('Pacific/Chatham'));
+date_timezone_set($date, timezone_open('Pacific/Chatham')); //arrival
 echo date_format($date, 'Y-m-d H:i:sP') . "\n";
 
 
