@@ -55,7 +55,8 @@
         if(lat != '' && lng !='' ){
         var map = new google.maps.Map(mapDiv, {
           center: {lat:parseInt(lat), lng:parseInt(lng)},
-          zoom: 8
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.TERRAIN
         });
        }
        else{
