@@ -6,8 +6,8 @@
     </head>
     <body>
         <form id="form1" action="javascript:void(0)" >
-            <input type="text" name="data1" />
-            <input type="text" name="data2" />
+            <input type="text" name="data1" value="1" />
+            <input type="text" name="data2" value="2" />
             <input type="submit" value="submit"/>
         </form>
         <div>
