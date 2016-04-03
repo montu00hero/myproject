@@ -9,8 +9,9 @@
 <body>
  <?php $total1 = ($bookinginfo->amount * $bookinginfo->currencyprice); ?>
  <div><center>
+   <form>
    <table  id="form_id" style="display:none; width:450px;">
-  <form>
+  
    <tr><TH COLSPAN=2>Add Markup</TH></tr>  
    <tr>
     <td>Enter Value</td> 
@@ -25,7 +26,7 @@
       <td>
        <input type="radio" name="per" value="1" checked="checked"> %  
        <input type="radio" name="per" value="2" <?php if($_REQUEST["per"] == "2") { echo 'checked="checked"'; } ?> > +
-       <input type="hidden" name="total_amount" value=<?php echo $total1 ?> >
+       <input type="hidden" name="total_amount" value=<?php echo $total1 ?> />
        </td>
     <tr>
       <td></td>
@@ -33,14 +34,16 @@
       <input  type="submit" value="Add" name="submit" /> 
      </td>
       </tr>
-     </form>
 
-  </table></center>
+  </table>
+          </form>
+
+     </center>
 
   <div id="email_display" style="display:none;" >
     <center>
      <input type="text" id="email_box" value="" onblur="" name="" />
-     <input type="button" id="" value="Send" onclick="send();" />
+     <input type="button" id="ee" value="Send" onclick="send();" />
     </center>
   </div>
 
@@ -99,7 +102,7 @@
 </tr>
    <tr>
     <td colspan="3" align="left" valign="top" class="my_profile_name_ex_tab">
-    <table width="100%" border="1" bordercolor="#999999" cellpadding="5" cellspacing="0">
+    <table width="100%" border="1" style="" cellpadding="5" cellspacing="0">
     <tr><td bgcolor="#517ba5"><strong style="color:#fff;">Check-In Date</strong></td>
       <td bgcolor="#517ba5"><strong style="color:#fff;">Check-Out Date</strong></td>
       <td bgcolor="#517ba5"><strong style="color:#fff;">Total Nights</strong></td>

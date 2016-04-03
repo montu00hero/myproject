@@ -6,34 +6,44 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>HELLO</title>
+        <title>HELLO Ladies</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <div>
+		<div >Note:To slow down the text, please click on running text  and if find any difficulties reload the page</div>
+		<br>
+		<br>
+		<br>
+		<br>
+		
             <label>Select Your Name</label>
             <select onclick="message()" id="aa">
                 <option value="">Please Select</option>   
                 <option value="amr">Manti</option>   
                 <option value="kaj">Kajal</option>   
-                <option value="san">Santi</option>   
+                <option value="san">Santi(Ghanti)</option>   
                 
                 
             </select>
             
         </div>
+		<br>
+		<br>
+		<br>
+	<!--<div style="display:none" id='j'>Note:To slow down the text, please click on running text only for(Ghanti)</div>-->
         
-        <div id="a" style="display:none">
-            <marquee> Hi,Amrita How Are You...  </marquee>
+        <div id="a" style="display:none;color:red">
+            <marquee onClick="this.setAttribute('scrollamount',3,3);"> Best luck for ur exams result........So many magic words for u only  </marquee>
         </div>
-        <div id="b" style="display:none">
-            <marquee  >santi ganti yes didi  ! ganti churaya yes didi! wapas kar k aao no didi ! </marquee>
+        <div id="b" style="display:none;color:green;" >
+            <marquee onClick="this.setAttribute('scrollamount',2,3);" >Santi Ghanti yes Didi  ! Ghanti churaya yes Didi! Wapas kar k aao no Didi ! </marquee>
             
         </div>
-        <div id="c" style="display:none">
+        <div id="c" style="display:none;color:blueviolet;">
             
-            <marquee>Hi,Kajal How Are You..... </marquee>
+            <marquee onClick="this.setAttribute('scrollamount',3,3);">Hi Kajal, How Are You.....('_') </marquee>
             
         </div>
         
@@ -48,6 +58,7 @@ and open the template in the editor.
        {
            
            document.getElementById("b").style.display='none';
+		   //document.getElementById("j").style.display='none';
            document.getElementById("c").style.display='none';
            document.getElementById("a").style.display='block';
        }  
@@ -56,11 +67,12 @@ and open the template in the editor.
        {
            document.getElementById("a").style.display='none';
            document.getElementById("c").style.display='none';
-           alert('!!!jahapanha tusi great ho! tufa kabul karo!!!!');
-           alert('!Ab app duniya k bachoo mai mashoor ho jaagi!');
+           alert('!!!Jahapanha tusi great ho! tufa kabul karo!!!!');
+         
            alert('!Ready steady and Go!');
            
-           document.getElementById("b").style.display='block';
+          // document.getElementById("j").style.display='block';
+		   document.getElementById("b").style.display='block';
            
        }  
        
@@ -68,6 +80,7 @@ and open the template in the editor.
        {
            document.getElementById("a").style.display='none';
            document.getElementById("b").style.display='none';
+		   //document.getElementById("j").style.display='none';
            document.getElementById("c").style.display='block';
            
        }  

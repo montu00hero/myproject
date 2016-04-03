@@ -5,7 +5,8 @@
 <html>
     <title>Test</title>
     <head>
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <!--<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>-->
+        <script src="jquery.v2.0.3.js"></script>
     </head>
     <body>
     <label>select
@@ -27,7 +28,7 @@
     </body>
 </html>
 
-<script>
+<script type="text/javascript">
 $(function(){
                 // var ck=$('#ckd').is(':checked');
               $('#ckd').prop('checked','true')
@@ -36,6 +37,9 @@ $(function(){
               console.log('Checkbox Value:'+s);  
               // document.write('Checkbox Value:'+s);    
               
+              $('#ckd').on('click',function(){
+                  alert($('#ckd').val());
+              });
     
     //-------------------------Radio-----------------------------//         
              var k=$("input[type='radio']:checked").val();
