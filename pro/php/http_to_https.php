@@ -1,17 +1,26 @@
+
+
+<!--  @@@@  http to https using HTMLS @@@ -->
+
+<!--< meta http-equiv="Refresh" content="0;URL=https://www.example.com" />   -->
+
+
+
+
 <?php
 
-/*
 
+
+
+/*    http to https using php 
+       
 $redirect_url = "https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
     header("Location: $redirect_url");
 
-*/
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
+
+/* http to https using htaccess   */
 
 echo'The easiest way is surely, to make your whole site HTTPS only (you can use relative links then).<br>
     Some providers offer this option in their control panel. If there is no such option, you can write a.<br>
