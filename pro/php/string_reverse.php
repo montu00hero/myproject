@@ -1,6 +1,6 @@
 <?php
 //--------------------------------reverse string-------------------//
-echo $a="say hello world! ";
+echo $a="say hello world!";
 
 $b=explode(' ',$a);
 //$d=array();
@@ -10,7 +10,8 @@ foreach($b as $c)
     
     
 }
-print_r($d);
+asort($d);
+echo'<pre>',print_r($d);
 $e=  implode(' ', $d);
 
 
@@ -22,7 +23,7 @@ echo $e;
 $array = array('apple', 'orange', 'pear', 'banana', 'apple',
 'pear', 'kiwi', 'kiwi', 'kiwi');
 
-print_r(array_count_values($array));
+echo'<pre>',print_r(array_count_values($array));
 
 /******** will output *********/
 /*
