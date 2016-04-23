@@ -30,7 +30,7 @@ echo $e;
 
 echo '<br>';
 
- echo "--------------array count duplicate values-------------------"," <br>";
+ echo "--------------array count duplicate values------array_count_values($array)-------------"," <br>";
 
 $array = array('apple', 'orange', 'pear', 'banana', 'apple',
 'pear', 'kiwi', 'kiwi', 'kiwi');
