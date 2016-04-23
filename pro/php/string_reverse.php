@@ -1,6 +1,16 @@
 <?php
-//--------------------------------reverse string-------------------//
+echo"--------------------------------reverse string-------------------//";
+
+echo '<br>';
+
 echo $a="say hello world!";
+
+echo '<br>';
+
+echo 'strrev(say hello world!) <br>';
+echo $g=strrev($a) ;
+
+echo '<br>';
 
 $b=explode(' ',$a);
 //$d=array();
@@ -11,14 +21,16 @@ foreach($b as $c)
     
 }
 asort($d);
-echo'<pre>',print_r($d);
+echo'<pre>',print_r($d),'<br>';
 $e=  implode(' ', $d);
 
 
 echo $e;
 
 
- //--------------array count duplicate values-------------------//
+echo '<br>';
+
+ echo "--------------array count duplicate values-------------------"," <br>";
 
 $array = array('apple', 'orange', 'pear', 'banana', 'apple',
 'pear', 'kiwi', 'kiwi', 'kiwi');
