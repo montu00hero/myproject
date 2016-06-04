@@ -56,10 +56,109 @@
 
                 $user_profile = $adapter->getUserProfile();
 
-              echo"<pre>", print_r($user_profile); 
+                 echo"<pre>", print_r($user_profile); 
+             
+                 
+    $identifier=$user_profile->identifier;
+    $webSiteURL=$user_profile->webSiteURL;
+    $profileURL=$user_profile->profileURL;
+    $photoURL=$user_profile->photoURL;
+    $displayName=$user_profile->displayName;
+    $description=$user_profile->description;
+    $firstName=$user_profile->firstName;
+    $lastName=$user_profile->lastName;
+    $gender=$user_profile->gender;
+    $language=$user_profile->language;
+    $age=$user_profile->age;
+    $birthDay=$user_profile->birthDay;
+    $birthMonth=$user_profile->birthMonth;
+    $birthYear=$user_profile->birthYear;
+    $email=$user_profile->email;
+    $emailVerified=$user_profile->emailVerified;
+    $phone=$user_profile->phone;
+    $address=$user_profile->address; 
+    $country=$user_profile->country;
+    $region=$user_profile->region; 
+    $city=$user_profile->city;
+    $zip=$user_profile->zip; 
+    
+                 
+                 $database_name="root";
+                 
+                 $host="localhost";
+                 $user="root";
+                 $pwd="";
+                 
+                 $conn=mysql_connect($host,$user,$pwd); 
+                 mysql_select_db($database_name);
+                 
+                 $que="select email from social_login where email='$email' ";
+                 $res=mysql_query($que) or die(mysql_error());
+                
+                  while($row=  mysql_fetch_array($res))
+                  {
+                    $ret=  $row['email'];     
+                  }
+                   
+                 
+                   
+                 if($ret){
+                  
+                  echo "login to social";   
+                 }
+                 
+                
+                 
+                 if(empty($ret)){ 
+                  $query="insert into social_login values($identifier,'$webSiteURL','$profileURL','$photoURL','$displayName','$description','$firstName','$lastName','$gender','$language','$age','$birthDay','$birthMonth','$birthYear','$email','$emailVerified','$phone','$address','$country','$region','$city','$zip')";
+                 $result=mysql_query($query) or die(mysql_error());
+                  
+                  if($result)
+                  {
+                      echo"insert the user info";
+                  }
+                 }
+                 
+  
+    /*
+        
+CREATE TABLE IF NOT EXISTS `social_login` (
+  `identifier` bigint(250) NOT NULL,
+  `webSiteURL` varchar(500) NOT NULL,
+  `profileURL` varchar(500) NOT NULL,
+  `photoURL` varchar(500) NOT NULL,
+  `displayName` varchar(100) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `firstName` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `gender` varchar(10) NOT NULL,
+  `language` varchar(20) NOT NULL,
+  `age` varchar(2) NOT NULL,
+  `birthDay` varchar(2) NOT NULL,
+  `birthMonth` varchar(2) NOT NULL,
+  `birthYear` varchar(4) NOT NULL,
+  `email` varchar(100) NOT NULL,
+  `emailVerified` varchar(50) NOT NULL,
+  `phone` varchar(15) NOT NULL,
+  `address` varchar(200) NOT NULL,
+  `country` varchar(50) NOT NULL,
+  `region` varchar(50) NOT NULL,
+  `city` varchar(50) NOT NULL,
+  `zip` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+      */             
+                 
+                 
+                 
     }  
     ?> 
 
   <a href="index.php?types=Google">Google</a>
   <a href="index.php?types=Facebook">Facebook</a>
   <a href="index.php?types=LinkedIn">LinkedIn</a>
+  
+  
+  
+  
+  
