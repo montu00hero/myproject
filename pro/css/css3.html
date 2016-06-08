@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+
+        <style>
+            .test{
+                text-shadow:6px 6px 6px grey;
+            }
+            div{
+                 margin-top: 120px;
+                 margin-bottom:100px;
+                border:1px solid black;
+                padding: 5px 10px;
+                border-radius: 50px;
+                background:yellow; 
+                box-shadow: 6px 6px 6px #0066CC;
+                /*border-image:url('y.png')120 120 round;*/  
+                background-image:url(y.png);
+                background-repeat: no-repeat;
+                background-size: 90% 80%;
+                width:200px;
+            }
+            
+            div:hover{
+                background:red;
+                box-shadow:10px 10px 10px black;
+            }
+            div.test:hover{
+                 transform:rotate(100deg); 
+                
+            }
+            
+           div.tea:hover{
+                
+                transform:scale(1,2) ;
+            }
+            div.pea:hover{
+                transform: skew(10deg,20deg);
+            }
+            div.ree:hover{
+                transform: rotateY(130deg);
+                transform: rotateX(130deg);
+            }
+           
+            div.tree:hover{
+                height:80px;
+                width:500px;
+                /*transform: scale(.2);*/
+                transform: scale(1.2);
+                /*transition: width 5s,height 5s;*/
+                transition: width 5s,transform 5s ;
+                
+                animation: first1 5s;
+            }
+            
+            div.see:hover{
+                animation: first1 5s;
+            }
+            
+            @keyframes first1
+            {
+                from{backround:yellow;} to {background:green;}
+            }
+            
+        </style>
+
+
+
+    </head>
+    <body>
+        <div class="test">Please do not try any booking(s) as site is under Maintenance ..</div>
+        <br>
+        <br>
+        <div class="tea">Please do not try any booking(s) as site is under Maintenance ..</div>
+        <br>
+        <br>
+        <div class="pea">Please do not try any booking(s) as site is under Maintenance ..</div>
+        
+        <br>
+        <br>
+        <div class="tree">Please do not try any booking(s) as site is under Maintenance ..</div>
+        
+         <br>
+        <br>
+        <div class="ree">Please do not try any booking(s) as site is under Maintenance ..</div>
+        
+        <br>
+        <br>
+        <div class="see">Please do not try any booking(s) as site is under Maintenance ..</div>
+        
+    </body>
+</html>
