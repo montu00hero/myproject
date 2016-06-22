@@ -1,0 +1,18 @@
+<script>
+
+$('div.hsr_hotels_img > img').css("transform","rotate(0deg)");
+$('div.hsr_hotels_img > img').css("opacity",".9");
+$('img').hover(function(){
+  console.log($(this).attr('src'));
+   $(this).css('z-index','1');
+    $(this).css("transform","rotate(0deg)");
+
+  $(this).css({"width":"100px","hight":"100px","transition":"width 5s"});
+
+ // $(this).css({"transform":"translate(100px,0px)","transition":"transform 5s"});
+  // $(this).css({"width":"initial","hight":"100px","transition":"width 5s"});
+});
+
+
+
+</script>
