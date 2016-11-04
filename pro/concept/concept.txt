@@ -1,0 +1,24 @@
+
+1.Cookies and Session
+
+Cookies are a means to store information in the end-user's browser, so that the server can track the end-user.
+
+Sessions are also implemented by using cookies, but the actual data is not in the browser; rather, it is stored in the user's session record on the server. In the case of sessions, cookies are used to identify a particular end-user's session identifier on the server records. Hence, they are a more secure way of storing user information.
+
+
+
+The main difference being that session data is stored on the server, while cookie data is stored on the client. Therefore, a client can easily modify the cookie contents, but will have to work way harder to modify the session contents.
+
+
+
+
+The session data that you read and write using $_SESSION is stored on server side, usually in text files in a temporary directory. They can not be accessed from outside.
+
+The thing connecting a session to a client browser is the session ID, which is usually stored in a cookie (see the comments for exceptions to that rule). This ID is, and should be, the only thing about your session that is stored on client side.
+
+If you delete the cookie in the browser, the connection to that session is lost, even if the file on the server continues to exist for some time.
+
+The session.save_path variable influences the location on the server where the session data is stored. If you are not the server's administrator, it is usually not necessary to change it.
+
+It's both! A session saves the actual session information on the server, but gives an identification cookie to the client to know which session belongs to which client. The information in the cookie itself is worthless, but allows the server to identify the client and use the actual session information.
+
