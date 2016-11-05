@@ -22,3 +22,15 @@ The session.save_path variable influences the location on the server where the s
 
 It's both! A session saves the actual session information on the server, but gives an identification cookie to the client to know which session belongs to which client. The information in the cookie itself is worthless, but allows the server to identify the client and use the actual session information.
 
+
+*********************************************************************************
+
+2.By default, PHP permits a maximum file upload of 2MB. You can ask users to resize their images before uploading but let’s face it: they won’t. Fortunately, we can increase the limit when necessary.
+
+Two PHP configuration options control the maximum upload size: upload_max_filesize and post_max_size. Both can be set to, say, “10M” for 10 megabyte file sizes.
+
+
+ini_set('upload_max_filesize', '10M');
+ini_set('post_max_size', '10M');
+ini_set('max_input_time', 300);
+ini_set('max_execution_time', 300);
